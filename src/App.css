@@ -1,0 +1,232 @@
+/* Ensure the body and html can handle scrolling */
+html, body {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Main App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* Section Styling */
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.countdown-section {
+  background: #f0f0f0;
+}
+
+.gallery-section {
+  background: #e3f2fd;
+}
+
+.gifts-section {
+  background: #ffebee;
+}
+
+.contact-section {
+  background: #69460e;
+}
+
+/* Navigation Styling */
+/* Base Styles */
+nav {
+  background-color: #1e2a38; /* Dark blue-grey background */
+  padding: 25px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative; /* Required for positioning the menu */
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.bar {
+  background-color: #f5f5f5; /* Light grey bars */
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links li a {
+  color: #f5f5f5; /* Light grey text */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-right: 35px;
+}
+
+.nav-links li a:hover {
+  color: #ff6f61; /* Warm coral color */
+  transform: scale(1.1);
+}
+
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6f61; /* Warm coral underline */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom right;
+}
+
+.nav-links li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    flex-direction: column;
+    width: 30%;
+    position: absolute;
+    top: 51px; /* Adjust this based on the height of the nav bar */
+    right: 0;
+    background-color: #1e2a38;
+    z-index: 10000;
+    border-radius: 20px ;
+    margin-right: 10px ;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
+  }
+
+  .nav-links li a:hover {
+    color: #ff6f61; /* Warm coral color */
+    
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the nav links when the menu is toggled */
+  }
+
+  .nav-links li {
+    margin: 13px 0; /* Adjust vertical margin for stacked items */
+    text-align: center; /* Center align text */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger menu on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links li a {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+}
+
+
+/* Confetti and Celebration Container Styling (kept separately in another file) */
+
+/* Remove unused or unnecessary CSS */
+
+/* Removed .countdown styling block as it's commented out */
+/* Removed duplicated celebration container styles */
+
+/* Celebration Container Styling */
+.celebration-container {
+  position: fixed;
+  top: 72px ;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://res.cloudinary.com/dprjiwgfo/image/upload/v1724005886/anp8n7f5oc8edlwxmmku.jpg') no-repeat center center;
+  background-size: cover; /* Ensures the image covers the whole container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Celebration Text Styling */
+.celebration-text {
+  font-size: 5rem;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 87, 34, 0.6);
+  animation: pulse 2s infinite, glow 1.5s ease-in-out infinite;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glow animation */
+@keyframes glow {
+  0% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.4),
+      0 0 15px rgba(255, 87, 34, 0.6);
+  }
+  50% {
+    text-shadow: 
+      2px 2px 6px rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 87, 34, 0.8);
+  }
+  100% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.4),
+      0 0 15px rgba(255, 87, 34, 0.6);
+  }
+}
+

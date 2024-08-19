@@ -1,0 +1,65 @@
+/* Celebration Container Styling */
+.celebration-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://res.cloudinary.com/dprjiwgfo/image/upload/v1724005886/anp8n7f5oc8edlwxmmku.jpg') no-repeat center center;
+  background-size: cover; /* Ensures the image covers the whole container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Celebration Text Styling */
+.celebration-text {
+  font-size: 5rem;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 87, 34, 0.6);
+  animation: pulse 2s infinite, glow 1.5s ease-in-out infinite;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto auto ;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glow animation */
+@keyframes glow {
+  0% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.4),
+      0 0 15px rgba(255, 87, 34, 0.6);
+  }
+  50% {
+    text-shadow: 
+      2px 2px 6px rgba(0, 0, 0, 0.3),
+      0 0 25px rgba(255, 87, 34, 0.8);
+  }
+  100% {
+    text-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.4),
+      0 0 15px rgba(255, 87, 34, 0.6);
+  }
+}

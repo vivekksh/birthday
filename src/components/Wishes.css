@@ -1,0 +1,97 @@
+/* src/pages/Wishes.css */
+
+.wishes-container {
+    padding: 20px;
+    background: url(https://res.cloudinary.com/dprjiwgfo/image/upload/v1724003632/bz8ofyihn3zsyoq197nn.jpg); /* Gradient from deep blue to teal */
+    /* min-height: 100vh; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  .wishes-title {
+    font-size: 4rem; /* Larger title */
+    color: #e1d6d5; /* Vibrant Coral color */
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Enhanced shadow for contrast */
+    background: -webkit-linear-gradient(left, #ee0e30, #e1dbdb); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  
+  .wishes-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Spacing between cards */
+    margin-top: 20px;
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  
+  .wish-card {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Deep gradient from teal to blue-grey */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    width: 80%; /* Full width with margins applied */
+    max-width: 800px; /* Set max-width for large screens */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin: 0 10px; /* Margin on left and right */
+  }
+  
+  .wish-card:nth-child(even) {
+    align-self: flex-end; /* Align to the right */
+  }
+  
+  .wish-card:nth-child(odd) {
+    align-self: flex-start; /* Align to the left */
+  }
+  
+  .wish-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+  }
+  
+  .wish-name {
+    font-size: 2rem;
+    color: #f5f5f5; /* Light text color for names */
+    margin-bottom: 15px;
+    background: -webkit-linear-gradient(left, #ff6f61, #f9a1a7); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .wish-message {
+    font-size: 1.6rem;
+    color: #d0d0d0; /* Slightly lighter grey for messages */
+  }
+  
+  @media (max-width: 768px) {
+    .wish-card {
+      width: 95%;
+      padding: 25px;
+      margin: 0; /* Remove horizontal margins on small screens */
+    }
+  
+    .wishes-title {
+      font-size: 2.8rem;
+    }
+  
+    .wish-name {
+      font-size: 1.7rem;
+    }
+  
+    .wish-message {
+      font-size: 1.4rem;
+    }
+  }
+  

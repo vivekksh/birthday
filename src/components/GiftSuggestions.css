@@ -1,0 +1,101 @@
+/* GiftSuggestions.css */
+
+.gift-suggestions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(https://res.cloudinary.com/dprjiwgfo/image/upload/v1724003212/jvlpveqmjqjgxpfqjgln.jpg);
+  background-position: center;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.teaser-section {
+  background: rgba(255, 240, 245, 0.9);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.teaser-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #B22222; /* Firebrick Red for headings */
+}
+
+.teaser-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #4B0082; /* Indigo for paragraphs */
+}
+
+.reveal-button {
+  background-color: #FF4500; /* Burnt Orange */
+  color: #FFFFFF; /* White text for contrast */
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.reveal-button:hover {
+  background-color: #FF6347; /* Tomato Red */
+}
+
+.surprise-gift-section {
+  background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
+
+  padding: 90px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.surprise-gift-section h2 {
+  font-size: 3rem;
+  color: yellow; /* Dark Magenta for a luxurious feel */
+  margin-bottom: 30px;
+  font-family: 'Cinzel', serif;
+
+
+}
+
+.surprise-gift-section img {
+  max-width: 100%;
+  height: 400px ;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.surprise-gift-section p {
+  font-size: 1.5rem;
+  color: #FFD700; /* Gold text to add a touch of elegance */
+}
+
+@media (max-width: 768px) {
+  .teaser-section h2, .surprise-gift-section h2 {
+    font-size: 2rem;
+  }
+
+  .teaser-section p, .surprise-gift-section p {
+    font-size: 1rem;
+  }
+
+  .reveal-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .surprise-gift-section {
+    padding: 30px;
+  }
+}

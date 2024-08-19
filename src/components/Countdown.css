@@ -1,0 +1,93 @@
+.countdown-background {
+  width: 100vw;
+  height: 100vh;
+  background: url(https://res.cloudinary.com/dprjiwgfo/image/upload/v1724012438/tumvaed8k5n86kpwjdsh.jpg);
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.countdown {
+  margin: 200px auto;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for more depth */
+  max-width: 400px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  animation: vibrantPulse 3s infinite; /* Added animation */
+}
+
+.countdown h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem; /* Slightly larger font size */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Increased letter-spacing */
+  color: #fff;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.countdown-item {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased shadow for better contrast */
+  width: 100px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  margin: 10px 0;
+  animation: itemGlow 1.5s infinite; /* Added glowing animation */
+}
+
+.countdown-item:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.6); /* Slightly more opaque on hover */
+}
+
+.countdown-number {
+  display: block;
+  font-size: 4rem; /* Increased font size */
+  color: #fff;
+  font-weight: bold;
+}
+
+.countdown-label {
+  display: block;
+  font-size: 1.2rem; /* Increased font size */
+  color: #f0f0f0;
+  margin-top: 5px;
+}
+
+@keyframes vibrantPulse {
+  0% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff8a5f, #feb75b);
+  }
+  100% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+}
+
+@keyframes itemGlow {
+  0% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
